@@ -16,6 +16,7 @@
 		E81F43042977EF97007C9035 /* News_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F43032977EF97007C9035 /* News_AppTests.swift */; };
 		E81F430E2977EF97007C9035 /* News_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F430D2977EF97007C9035 /* News_AppUITests.swift */; };
 		E81F43102977EF97007C9035 /* News_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F430F2977EF97007C9035 /* News_AppUITestsLaunchTests.swift */; };
+		E81F431F2977F2C7007C9035 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81F431E2977F2C7007C9035 /* ListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E81F43092977EF97007C9035 /* News-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "News-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81F430D2977EF97007C9035 /* News_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News_AppUITests.swift; sourceTree = "<group>"; };
 		E81F430F2977EF97007C9035 /* News_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E81F431E2977F2C7007C9035 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +103,7 @@
 			children = (
 				E81F42EC2977EF94007C9035 /* AppDelegate.swift */,
 				E81F42EE2977EF94007C9035 /* SceneDelegate.swift */,
-				E81F42F02977EF94007C9035 /* ViewController.swift */,
+				E81F431D2977F216007C9035 /* Controller */,
 				E81F42F22977EF94007C9035 /* Main.storyboard */,
 				E81F42F52977EF96007C9035 /* Assets.xcassets */,
 				E81F42F72977EF96007C9035 /* LaunchScreen.storyboard */,
@@ -125,6 +127,15 @@
 				E81F430F2977EF97007C9035 /* News_AppUITestsLaunchTests.swift */,
 			);
 			path = "News-AppUITests";
+			sourceTree = "<group>";
+		};
+		E81F431D2977F216007C9035 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E81F42F02977EF94007C9035 /* ViewController.swift */,
+				E81F431E2977F2C7007C9035 /* ListViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +271,7 @@
 			files = (
 				E81F42F12977EF94007C9035 /* ViewController.swift in Sources */,
 				E81F42ED2977EF94007C9035 /* AppDelegate.swift in Sources */,
+				E81F431F2977F2C7007C9035 /* ListViewController.swift in Sources */,
 				E81F42EF2977EF94007C9035 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
