@@ -7,17 +7,10 @@
 
 import UIKit
 
-class ListViewController: UITableViewController {
+class CategoryViewController: UITableViewController {
 
     override func viewDidLoad() {
-        print("count is \(Categories.count)")
         super.viewDidLoad()
- 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
     // MARK: - Table view data source
@@ -30,16 +23,28 @@ class ListViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "categoryItem", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constant.categoryCell, for: indexPath)
+        var content = cell.defaultContentConfiguration()
         let item = Categories[indexPath.row]
-        print(item)
-        cell.textLabel?.text = item.title
-
-        // Configure the cell...
-
+        content.text = item.title
+        cell.contentConfiguration = content
         return cell
     }
 
+//MARK: - TableView Delegate Method
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Constant.newsSegue, sender: self)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! NewsListController
+
+        if let indexPath = tableView.indexPathForSelectedRow {
+            destinationVC.details = Categories[indexPath.row]
+        }
+    }
 
     /*
     // Override to support conditional editing of the table view.
