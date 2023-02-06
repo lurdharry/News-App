@@ -12,7 +12,7 @@ import AlamofireImage
 class DetailsViewController: UIViewController {
     
     @IBOutlet weak var topImage: UIImageView!
-
+    @IBOutlet weak var newsTitle: UILabel!
     
     var details : News? {
         didSet{
@@ -26,6 +26,7 @@ class DetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = details?.source.name
+        newsTitle.text = details?.title
     }
 
 }
